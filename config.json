@@ -1,0 +1,13 @@
+{
+  "exceltestplan": "yourTestPlan.xls",
+  "exceltestplanfolder": "yourTestPlanFolder.xls",
+  "exceltestlabfolder": "yourTestLabFolder.xls",
+  "exceltestlab": "yourTestLab.xls",
+  "server": "http://yourAlmServer",
+  "port": "8080",
+  "instance": "yourInstance",
+  "domain": "yourDomain",
+  "project": "yourProject",
+  "username": "yourName",
+  "password": "yourPassword"
+}

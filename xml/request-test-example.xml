@@ -1,0 +1,54 @@
+<Entity Type="test">
+      <Fields>
+		    <Field Name="owner">
+          <Value>amanganiello</Value>
+		   </Field>
+        <Field Name="bpta-change-detected">
+          <Value></Value>
+		   </Field>
+		    <Field Name="parent-id">
+          <Value>2058</Value>
+		   </Field>
+		   <Field Name="user-03">
+          <Value>
+          </Value>
+        </Field>
+        <Field Name="user-02">
+          <Value>
+          </Value>
+        </Field>
+        <Field Name="user-01">
+          <Value>
+          </Value>
+        </Field>
+		<Field Name="dev-comments">
+          <Value>
+          </Value>
+        </Field>
+		<Field Name="description">
+          <Value>&lt;html&gt;&lt;body&gt;&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Purpose: &lt;/b&gt;&lt;/font&gt;&lt;br&gt;Check that the system stores the successful the Product&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Pre Condition:&lt;/b&gt;&lt;/font&gt;&lt;br&gt;The file &amp;quot;&lt;b&gt;&lt;i&gt;createUpdateProduct&lt;/i&gt;&lt;/b&gt;&amp;quot;, is filled completly with all Mandatory and optional fields.&lt;br&gt;The user has the&lt;font color=&quot;#FF0000&quot;&gt; &lt;/font&gt;authorization to log in OneLeo.&lt;br&gt;Does not exist a product with same &lt;b&gt;Internal Code&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Main scenario:&lt;/b&gt;&lt;/font&gt;&lt;br&gt;The user runs the job.&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Configuration Point:&lt;/b&gt;&lt;/font&gt;&lt;br&gt;-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;BR involved:&lt;/b&gt;&lt;/font&gt;&lt;br&gt;-&lt;br&gt;&lt;br&gt;&lt;font color=&quot;#FF0000&quot;&gt;&lt;b&gt;Post Condition:&lt;/b&gt;&lt;/font&gt;&lt;br&gt;The system stores the successfull data for Product on DB and in UI.&lt;/body&gt;&lt;/html&gt;</Value>
+        </Field>
+		  <Field Name="estimate-devtime">
+		   <Value></Value> 
+		  </Field>
+		  <Field Name="exec-status">
+		   <Value>passed</Value> 
+		  </Field>
+		  <Field Name="storage-path">
+		   <Value></Value> 
+		  </Field>
+		  <Field Name="status">
+		   <Value>Design</Value> 
+		  </Field>
+		  <Field Name="template">
+		   <Value></Value> 
+		  </Field>
+		  <Field Name="name">
+		   <Value>my test</Value> 
+		  </Field>
+		  <Field Name="subtype-id">
+		   <Value>MANUAL</Value> 
+		  </Field>
+      </Fields>
+      <RelatedEntities/>
+    </Entity>

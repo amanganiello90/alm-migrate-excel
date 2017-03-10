@@ -1,0 +1,17 @@
+<Entity Type="test-set">
+      <Fields>
+		    <Field Name="name">
+          <Value>Interface</Value>
+		   </Field>
+		    <Field Name="parent-id">
+          <Value>22</Value>
+		   </Field>
+		    <Field Name="subtype-id">
+          <Value>hp.qc.test-set.default</Value>
+		   </Field>
+		   <Field Name="status">
+          <Value>Open</Value>
+		   </Field>
+      </Fields>
+      <RelatedEntities/>
+  </Entity>

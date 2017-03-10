@@ -1,0 +1,24 @@
+
+<Entity Type="design-step">
+      <Fields>
+        <Field Name="user-01">
+          <Value></Value>
+		   </Field>
+		   <Field Name="user-02">
+          <Value></Value>
+		   </Field>
+		 <Field Name="description">
+          <Value>The user insert in the flow brand correctly</Value>
+		   </Field> 
+		   <Field Name="expected">
+          <Value>The system accepts the data.</Value>
+		   </Field>
+		   <Field Name="name">
+          <Value>Step 1 -</Value>
+		   </Field>
+		   <Field Name="parent-id">
+          <Value>22285</Value>
+		   </Field>
+      </Fields>
+      <RelatedEntities/>
+    </Entity>

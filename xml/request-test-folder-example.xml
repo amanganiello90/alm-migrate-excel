@@ -1,0 +1,26 @@
+
+<Entity Type="test-folder">
+      <Fields>
+		  <Field Name="name">
+          <Value>my folder</Value>
+		   </Field>
+		    <Field Name="parent-id">
+          <Value>2</Value>
+		   </Field>
+      </Fields>
+      <RelatedEntities/>
+    </Entity>
+	
+	---------------------
+	<Entity Type="test-folder">
+      <Fields>
+		  <Field Name="name">
+          <Value>Product</Value>
+		   </Field>
+		    <Field Name="parent-id">
+          <Value>previos id</Value>
+		   </Field>
+      </Fields>
+      <RelatedEntities/>
+    </Entity>
+	

@@ -1,0 +1,12 @@
+<Entity Type="test-set-folder">
+      <Fields>
+		  <Field Name="name">
+          <Value>FolderNameTest</Value>
+		   </Field>
+		    <Field Name="parent-id">
+          <Value>2</Value>
+		   </Field>
+      </Fields>
+      <RelatedEntities/>
+    </Entity>
+	

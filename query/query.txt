@@ -1,0 +1,106 @@
+----------To extract testPlan:
+
+SELECT
+TS_NAME as TestName,
+DS_STEP_NAME as StepName,
+DS_USER_01 as BusinessRules,
+DS_USER_02 as ConfigurationPoint,
+TS_DESCRIPTION as DescriptionTest,
+DS_DESCRIPTION as Descriptionstep,
+DS_EXPECTED as Expected,
+TS_USER_02 as AutomatedScenario,
+TS_BPTA_CHANGE_DETECTED as ChangeStatus,
+TS_DEV_COMMENTS as Comments,
+TS_RESPONSIBLE as Designer,
+TS_ESTIMATE_DEVTIME as  EstimatedDevTime ,
+TS_EXEC_STATUS as ExecutionStatus ,
+TS_USER_03 as Issue,
+TS_PATH  as Path,
+TS_STATUS as Status,
+TS_TEMPLATE as Template,
+TS_TYPE as Type,
+TS_USER_01 as UserStories,
+DS_STEP_ORDER  as stepOrder,
+AL1.AL_DESCRIPTION as folderName,
+TS_SUBJECT as parentFolder
+FROM DESSTEPS, TEST, ALL_LISTS AL1
+where  DS_TEST_ID = TS_TEST_ID
+AND AL1.AL_DESCRIPTION='Product'
+AND  AL_ITEM_ID = TS_SUBJECT
+and AL1.AL_FATHER_ID= ANY(SELECT  AL2.AL_ITEM_ID FROM ALL_LISTS AL2 WHERE AL2.AL_DESCRIPTION='folder2Name' AND AL2.AL_FATHER_ID= ANY(SELECT  AL3.AL_ITEM_ID FROM ALL_LISTS AL3 WHERE AL3.AL_DESCRIPTION='folder1Name'))
+order by TS_NAME,DS_STEP_ORDER
+
+----------To extract testPlan with id:
+
+SELECT
+TS_NAME as TestName,
+DS_STEP_NAME as StepName,
+DS_USER_01 as BusinessRules,
+DS_USER_02 as ConfigurationPoint,
+TS_DESCRIPTION as DescriptionTest,
+DS_DESCRIPTION as Descriptionstep,
+DS_EXPECTED as Expected,
+TS_USER_02 as AutomatedScenario,
+TS_BPTA_CHANGE_DETECTED as ChangeStatus,
+TS_DEV_COMMENTS as Comments,
+TS_RESPONSIBLE as Designer,
+TS_ESTIMATE_DEVTIME as  EstimatedDevTime ,
+TS_EXEC_STATUS as ExecutionStatus ,
+TS_USER_03 as Issue,
+TS_PATH  as Path,
+TS_STATUS as Status,
+TS_TEMPLATE as Template,
+TS_TYPE as Type,
+TS_USER_01 as UserStories,
+DS_STEP_ORDER  as stepOrder,
+AL1.AL_DESCRIPTION as folderName,
+TS_SUBJECT as parentFolder
+FROM DESSTEPS, TEST, ALL_LISTS AL1
+where  DS_TEST_ID = TS_TEST_ID
+AND  AL_ITEM_ID = TS_SUBJECT
+and  AL_ITEM_ID = '3771'
+order by TS_NAME,DS_STEP_ORDER
+
+
+--------------to extract one test add in the first where clouse : AND TS_NAME='yourTestName'
+
+----------------------------To extract testLab:
+ 
+ SELECT
+CY_CYCLE as TestLabName,
+CY_STATUS as Status,
+TC_TEST_ORDER as OrderTestsInTestLab,
+TC_TESTER_NAME as ResponsibleTester,
+TC_ACTUAL_TESTER as Tester,
+TS_NAME as TestName,
+CF_ITEM_NAME as folderName,
+TS_SUBJECT as folderTestId ,
+CF_FATHER_ID as parentFolder
+FROM TEST T, CYCLE C,CYCL_FOLD F1, TESTCYCL
+Where
+F1.CF_ITEM_ID=C.CY_FOLDER_ID and
+ tc_test_id= ts_test_id  AND
+tc_cycle_id= cy_cycle_id   AND
+F1.CF_ITEM_NAME = 'Interface' AND
+F1.CF_FATHER_ID = ANY (SELECT  F2.CF_ITEM_ID FROM CYCL_FOLD F2 WHERE F2.CF_ITEM_NAME='folder3Name' AND F2.CF_FATHER_ID= ANY(SELECT  F3.CF_ITEM_ID FROM CYCL_FOLD F3 WHERE F3.CF_ITEM_NAME='folder2Name' AND F3.CF_FATHER_ID=ANY(SELECT  F4.CF_ITEM_ID FROM CYCL_FOLD F4 WHERE F4.CF_ITEM_NAME='folder1Name')))
+ORDER BY TC_TEST_ORDER,CY_CYCLE  ASC
+
+
+----------------------------To extract all test plan folders (for mapping):
+
+select AL_ITEM_ID as id,
+  AL_FATHER_ID as parentId,
+  AL_DESCRIPTION as name
+ from ALL_LISTs
+ order by AL_ITEM_ID
+ 
+----------------------------To extract all test lab folders (for mapping): 
+
+ select CF_ITEM_ID as id,
+  CF_FATHER_ID as parentId,
+  CF_ITEM_NAME as name
+ from CYCL_FOLD
+ order by CF_ITEM_ID
+ 
+ 
+ 

@@ -1,0 +1,23 @@
+<Entity Type="test-instance">
+      <Fields>
+		    <Field Name="test-order">
+          <Value>1</Value>
+		   </Field>
+		    <Field Name="cycle-id">
+          <Value>120</Value>
+		   </Field>
+		   <Field Name="test-id">
+          <Value>4276</Value>
+		   </Field>
+		   <Field Name="subtype-id">
+          <Value>hp.qc.test-instance.MANUAL</Value>
+		   </Field>
+		   <Field Name="owner">
+          <Value>barbarino</Value>
+		   </Field>
+		   <Field Name="actual-tester">
+          <Value>barbarino</Value>
+		   </Field>
+      </Fields>
+      <RelatedEntities/>
+  </Entity>
